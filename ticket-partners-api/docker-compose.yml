@@ -14,3 +14,5 @@ services:
       MYSQL_DATABASE: ticket_db
     ports:
       - 3306:3306
+    volumes:
+      - ./.docker/mysql:/docker-entrypoint-initdb.d
