@@ -44,3 +44,16 @@ Content-Type: application/json
 {
     "name": "A1"
 }
+
+###
+@spotName = {{ createSpot.response.body.name }}
+
+###
+POST http://localhost:3000/events/{{ eventID }}/reserve
+Content-Type: application/json
+
+{
+    "spots": ["{{ spotName }}"],
+    "ticket_kind": "full",
+    "email": "test@mail.com"
+}
