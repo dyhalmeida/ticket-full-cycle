@@ -17,6 +17,6 @@ type ReservationResponse struct {
 	EventID    string `json:"event_id"`
 }
 
-type Partner interface {
+type IPartner interface {
 	MakeReservation(req *ReservationRequest) ([]ReservationResponse, error)
 }
