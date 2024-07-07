@@ -3,7 +3,7 @@ package service
 type ReservationRequest struct {
 	EventID    string   `json:"event_id"`
 	Spots      []string `json:"spots"`
-	TicketKind string   `json:"ticket_kind"`
+	TicketType string   `json:"ticket_type"`
 	CardHash   string   `json:"card_hash"`
 	Email      string   `json:"email"`
 }
