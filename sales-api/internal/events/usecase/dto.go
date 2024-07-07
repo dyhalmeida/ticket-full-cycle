@@ -50,3 +50,22 @@ type ListSpotsOutputDTO struct {
 	Event EventDTO  `json:"event"`
 	Spots []SpotDTO `json:"spots"`
 }
+
+type BuyTicketsInputDTO struct {
+	EventID    string   `json:"event_id"`
+	Spots      []string `json:"spots"`
+	TicketType string   `json:"ticket_type"`
+	CardHash   string   `json:"card_hash"`
+	Email      string   `json:"email"`
+}
+
+type BuyTicketsOutputDTO struct {
+	Tickets []TicketDTO `json:"tickets"`
+}
+
+type TicketDTO struct {
+	ID         string  `json:"id"`
+	SpotID     string  `json:"spot_id"`
+	TicketType string  `json:"ticket_type"`
+	Price      float64 `json:"price"`
+}
