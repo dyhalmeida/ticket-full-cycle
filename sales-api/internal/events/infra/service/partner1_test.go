@@ -21,7 +21,7 @@ func TestPartner1_MakeReservation_Success(t *testing.T) {
 	req := &ReservationRequest{
 		EventID:    "1",
 		Spots:      []string{"A1"},
-		TicketKind: "full",
+		TicketType: "full",
 		Email:      "user1@test.com",
 	}
 
@@ -45,7 +45,7 @@ func TestPartner1_MakeReservation_Failure(t *testing.T) {
 	req := &ReservationRequest{
 		EventID:    "1",
 		Spots:      []string{"A1"},
-		TicketKind: "full",
+		TicketType: "full",
 		Email:      "user1@test.com",
 	}
 
