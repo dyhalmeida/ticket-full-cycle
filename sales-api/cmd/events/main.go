@@ -15,12 +15,14 @@ import (
 	"github.com/dyhalmeida/ticket-full-cycle/sales-api/internal/events/usecase"
 	_ "github.com/go-sql-driver/mysql"
 
+	_ "github.com/dyhalmeida/ticket-full-cycle/sales-api/docs"
 	httpHandler "github.com/dyhalmeida/ticket-full-cycle/sales-api/internal/events/infra/http"
+	httpSwagger "github.com/swaggo/http-swagger"
 )
 
 // @title Events API
 // @version 1.0
-// @description This is a server for managing events. Imersão Full Cycle
+// @description This is a server for managing events
 // @host localhost:8080
 // @BasePath /
 func main() {
@@ -62,6 +64,7 @@ func main() {
 	)
 
 	r := http.NewServeMux()
+	r.HandleFunc("/swagger/", httpSwagger.WrapHandler)
 	r.HandleFunc("GET /events", eventsHandler.ListEvents)
 	r.HandleFunc("GET /events/{eventID}", eventsHandler.GetEvent)
 	r.HandleFunc("GET /events/{eventID}/spots", eventsHandler.ListSpots)
