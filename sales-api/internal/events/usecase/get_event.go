@@ -2,22 +2,6 @@ package usecase
 
 import "github.com/dyhalmeida/ticket-full-cycle/sales-api/internal/events/domain"
 
-type GetEventInputDTO struct {
-	ID string
-}
-
-type GetEventOutputDTO struct {
-	ID           string  `json:"id"`
-	Name         string  `json:"name"`
-	Location     string  `json:"location"`
-	Organization string  `json:"organization"`
-	Rating       string  `json:"rating"`
-	Date         string  `json:"date"`
-	Capacity     int     `json:"capacity"`
-	Price        float64 `json:"price"`
-	PartnerID    int     `json:"partner_id"`
-}
-
 type GetEventUseCase struct {
 	eventRepository domain.EventRepositoryInterface
 }
