@@ -1,5 +1,7 @@
 package usecase
 
+import "time"
+
 type EventDTO struct {
 	ID           string  `json:"id"`
 	Name         string  `json:"name"`
@@ -77,4 +79,29 @@ type CreateSpotsInputDTO struct {
 
 type CreateSpotsOutputDTO struct {
 	Spots []SpotDTO `json:"spots"`
+}
+
+type CreateEventInputDTO struct {
+	Name         string    `json:"name"`
+	Location     string    `json:"location"`
+	Organization string    `json:"organization"`
+	Rating       string    `json:"rating"`
+	Date         time.Time `json:"date"`
+	Capacity     int       `json:"capacity"`
+	ImageURL     string    `json:"image_url"`
+	Price        float64   `json:"price"`
+	PartnerID    int       `json:"partner_id"`
+}
+
+type CreateEventOutputDTO struct {
+	ID           string    `json:"id"`
+	Name         string    `json:"name"`
+	Location     string    `json:"location"`
+	Organization string    `json:"organization"`
+	Rating       string    `json:"rating"`
+	Date         time.Time `json:"date"`
+	Capacity     int       `json:"capacity"`
+	ImageURL     string    `json:"image_url"`
+	Price        float64   `json:"price"`
+	PartnerID    int       `json:"partner_id"`
 }
