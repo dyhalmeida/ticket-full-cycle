@@ -69,3 +69,12 @@ type TicketDTO struct {
 	TicketType string  `json:"ticket_type"`
 	Price      float64 `json:"price"`
 }
+
+type CreateSpotsInputDTO struct {
+	EventID       string `json:"event_id"`
+	NumberOfSpots int    `json:"number_of_spots"`
+}
+
+type CreateSpotsOutputDTO struct {
+	Spots []SpotDTO `json:"spots"`
+}
