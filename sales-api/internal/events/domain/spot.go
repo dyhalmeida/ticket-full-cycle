@@ -12,6 +12,7 @@ var (
 	ErrSpotNameStartWithLetter = errors.New("spot name must start with a letter")
 	ErrSpotNameEndtWithNumber  = errors.New("spot name must end with a number")
 	ErrSpotAlreadyReserved     = errors.New("spot already reserved")
+	ErrSpotNotFound            = errors.New("spot not found")
 )
 
 type SpotStatus string
