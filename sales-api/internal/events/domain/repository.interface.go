@@ -1,6 +1,6 @@
 package domain
 
-type EventRepositoryInterface interface {
+type IEventRepository interface {
 	ListEvents() ([]Event, error)
 	FindEventByID(eventID string) (*Event, error)
 	FindSpotsByEventID(eventID string) ([]*Spot, error)

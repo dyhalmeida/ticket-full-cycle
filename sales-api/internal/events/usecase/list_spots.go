@@ -3,10 +3,10 @@ package usecase
 import "github.com/dyhalmeida/ticket-full-cycle/sales-api/internal/events/domain"
 
 type ListSpotsUseCase struct {
-	eventRepository domain.EventRepositoryInterface
+	eventRepository domain.IEventRepository
 }
 
-func NewListSpotsUseCase(eventRepository domain.EventRepositoryInterface) *ListSpotsUseCase {
+func NewListSpotsUseCase(eventRepository domain.IEventRepository) *ListSpotsUseCase {
 	return &ListSpotsUseCase{eventRepository: eventRepository}
 }
 
